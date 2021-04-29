@@ -1,3 +1,53 @@
+### 7.1.2
+
+Major performance improvement of the resource panel
+Fix the script error thrown when gantt.destructor is called while gantt.load is in progress
+Fix the incorrect behavior of split tasks on change of the task id
+Fix the incorrect work of scroll on mouse wheel in Angular
+
+### 7.1.1
+
+Fix the regression in the click_drag plugin
+Fix the Security Violation error thrown from the gantt when setting the gantt.config.csp config to the "auto" mode
+Fix code build settings that caused the package code v7.1.0 to contain ES6 syntax, the library is again ES5 compatible
+Fix the script error fired when trying to resize a grid column when gantt.config.reorder_grid_columns config is enabled
+Update TypeScript type definitions
+Add the onDestroy event to DataStore
+Performance improvement for gantts with a large number of task calendars
+Performance improvement for calculations of resource assignment during batchUpdate and autoScheduling
+
+### 7.1.0
+
+The ability to assign resources to the specific dates of the task
+The new gantt.getTaskAssignments() method
+The ability to manage the resource assignments via the new gantt.config.process_resource_assignments and gantt.updateTaskAssignments() Gantt API
+Rollup tasks and milestones
+The ability to hide task bars and milestones in the timeline area
+The ability to set different working hours for different time spans
+The ability to set the height for a separate row in the grid
+The ability to resize a row in the grid by drag-and-drop
+The ability to get the height of the DOM element of the task via the gantt.getTaskBarHeight() method
+New events: onBeforeRowResize, onRowResize, onBeforeRowResizeEnd, onAfterRowResize
+The onrender callback for rendering a grid cell into DOM is added
+The onrender callback for rendering a custom element of the task layer into DOM is added
+Fix the issue with reordering tasks vertically in the resource view when resources have values assigned
+Fix the issue that caused “resource_cell_value” not being called and the resource markers not being rendered if a task doesn’t start at the beginning of the timeline cell
+Fix the issue that caused Gantt to stop working when deleting the task with the id that already exists in the data store
+Fix the script error thrown when specifying the 0 number value as a task id even if the “root_id” parameter is set
+Fix the issue that caused the resizer listener not to work in Salesforce environment
+Fix the script error appeared when applying Fullscreen Extension several times together with its methods
+Fix the issue with Keyboard Navigation Extension that caused navigation in Grid to stop working when adding the plugin several times
+Fix the issue with Inline Editors when the editor couldn't be opened in a cell that is located after a column that is hidden via hide:true property
+
+### 7.0.13
+
+Fix the script error happened when the layout configuration is changed dynamically and gantt.addTaskLayer is used
+Fix the issue with the initial inner height of the resource histogram when the fetchTasks option is used
+Fix the incorrect work of the predecessor editor which caused it to delete existing links when the value is edited
+Fix the incorrect work of the gantt when a task with a non-unique ID is added to the gantt via the gantt.addTask and gantt.parse methods
+Performance improvement for drag and drop when the auto_types and drag_project configuration options are enabled
+Performance improvement for calculation of working time when duration_unit is set to "day"
+
 ### 7.0.12
 
 Fix some minor issues with vertical drag and drop in large projects
